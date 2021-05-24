@@ -15,11 +15,11 @@ def crop():
     
     sprinklarge = Entry(cropwin, bd = 5)
     sprinklarge.focus_set()
-    sprinklarge.grid(row = 2, column = 3)
+    sprinklarge.grid(row = 4, column = 1)
     
     sprinkbiggest = Entry(cropwin, bd = 5)
     sprinkbiggest.focus_set()
-    sprinkbiggest.grid(row = 2, column = 4)
+    sprinkbiggest.grid(row = 4, column = 2)
     
     slab = Label(cropwin, text ="sprinkler")
     slab.grid(row = 1, column = 1)
@@ -28,17 +28,17 @@ def crop():
     mlab.grid(row = 1, column = 2)
     
     llab = Label(cropwin, text ="iridium sprinkler")
-    llab.grid(row = 1, column = 3)
+    llab.grid(row = 3, column = 1)
     
     hlab = Label(cropwin, text = "iridium with booster")
-    hlab.grid(row = 1, column = 4)
+    hlab.grid(row = 3, column = 2)
     
     seedamount = IntVar()
     
     calc = Button(cropwin, text= "Calculate", command =lambda: Calculate(sprinksmall.get(),sprinkmedium.get(),sprinklarge.get(),sprinkbiggest.get()))
-    calc.grid(row = 1, column = 5)
+    calc.grid(row = 2, column = 3)
     amountdisplay = Label(cropwin, textvariable = seedamount)
-    amountdisplay.grid(row = 2, column = 5)
+    amountdisplay.grid(row = 3, column = 3)
 
 def Calculate(x,c,y,z):
     global seedamount
