@@ -1,4 +1,5 @@
 from tkinter import *
+from math import *
 
 def crop():
     global seedamount
@@ -64,11 +65,34 @@ def Calculate(x,c,y,z):
     
     seedamount.set(int(smallseeds) + int(mediumseeds) + int(largeseeds) + int(hugeseeds))
 
+def geode():
+    global totalgeode
+
+    geodewin = Toplevel(main)
+    label = Label(geodewin,text = "total money")
+    label.grid(row = 1, column = 1)
+    money = Entry(geodewin, bd = 5)
+    money.focus_set()
+    money.grid(row = 2, column = 1)
+    calc = Button(geodewin, text= "Calculate", command =lambda: geodecalc(money.get()))
+    calc.grid(row = 1, column = 2)
+    totalgeode = IntVar()
+    text = Label(geodewin, textvariable = totalgeode)
+    text.grid(row = 2, column=2)
+
+def geodecalc(x):
+    global totalgeode
+    total = int(x)/325
+    total = floor(total)
+    totalgeode.set(total)
+    
 
 main = Tk()
 label = Label(main, text = "Stardew Valley Tools")
 label.pack(side = TOP)
-button = Button(main,text = "crop space calculator", command = lambda:crop()) 
-button.pack(side = TOP)
+sprinkbutton = Button(main,text = "crop space calculator", command = lambda:crop()) 
+sprinkbutton.pack(side = TOP)
+geodebutton = Button(main,text = "buying geodes from crobus", command = lambda:geode()) 
+geodebutton.pack(side = TOP)
 
 main.mainloop()
