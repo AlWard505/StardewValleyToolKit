@@ -82,10 +82,12 @@ def geode():
 
 def geodecalc(x):
     global totalgeode
-    total = int(x)/325
-    total = floor(total)
+    try:
+        total = int(x)/325
+        total = floor(total)
+    except:
+        total = 0
     totalgeode.set(total)
-    
 
 main = Tk()
 label = Label(main, text = "Stardew Valley Tools")
