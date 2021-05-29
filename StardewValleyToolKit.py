@@ -111,6 +111,72 @@ def geodecalc(x,y):
         total = 0
     totalgeode.set(total)
 
+def replace():
+    global totalrep
+    rewindow = Toplevel(main)
+
+    regla = Label(rewindow, text = "regular quality")
+    regla.grid(row=1,column=1)
+    reg = Entry(rewindow, bd = 5)
+    reg.focus_set()
+    reg.grid(row = 1, column = 2)
+
+    silla = Label(rewindow, text = "silver quality")
+    silla.grid(row=2,column=1)
+    sil = Entry(rewindow, bd = 5)
+    sil.focus_set()
+    sil.grid(row = 2, column = 2)
+
+    golla = Label(rewindow, text = "golden quality")
+    golla.grid(row=3,column=1)
+    gol = Entry(rewindow, bd = 5)
+    gol.focus_set()
+    gol.grid(row = 3, column = 2)
+
+    irila = Label(rewindow, text = "iridium quality")
+    irila.grid(row=4,column=1)
+    iri = Entry(rewindow, bd = 5)
+    iri.focus_set()
+    iri.grid(row = 4, column = 2)
+
+
+    
+    totalrep = IntVar()
+    text = Label(rewindow, textvariable = totalrep)
+    text.grid(row = 2, column=4)
+    addbut = Button(rewindow, text = "Calculate", command=lambda: repcalc(reg.get(),sil.get(),gol.get(),iri.get()))
+    addbut.grid(row=3,column = 4)
+    frame = Frame(rewindow, width=15)
+    frame.grid(row = 2, column=3)
+
+def repcalc(x,y,z,c):
+    global totalrep
+
+    try:
+        xtemp = int(x)
+    except:
+        xtemp = 0
+
+    try:
+        ytemp = int(y)
+    except:
+        ytemp = 0
+
+    try:
+        ztemp = int(z)
+    except:
+        ztemp = 0
+
+    try:
+        ctemp = int(c)
+    except:
+        ctemp = 0 
+
+    total = xtemp + ytemp + ztemp + ctemp
+    totalrep.set(total)
+    print(totalrep)
+
+
 main = Tk()
 label = Label(main, text = "Stardew Valley Tools")
 label.pack(side = TOP)
@@ -118,5 +184,7 @@ sprinkbutton = Button(main,text = "crop space calculator", command = lambda:crop
 sprinkbutton.pack(side = TOP)
 geodebutton = Button(main,text = "buying geodes from crobus", command = lambda:geode()) 
 geodebutton.pack(side = TOP)
+replacebutton = Button(main,text = "replacing grown crops", command = lambda:replace()) 
+replacebutton.pack(side = TOP)
 
 main.mainloop()
