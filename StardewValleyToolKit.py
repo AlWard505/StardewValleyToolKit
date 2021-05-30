@@ -111,6 +111,7 @@ def geodecalc(x,y):
         total = 0
     totalgeode.set(total)
 
+# used to check how many seeds you need to buy after a harvest
 def replace():
     global totalrep
     rewindow = Toplevel(main)
@@ -149,6 +150,7 @@ def replace():
     frame = Frame(rewindow, width=15)
     frame.grid(row = 2, column=3)
 
+# calculates the amount from the 4 given entrys
 def repcalc(x,y,z,c):
     global totalrep
 
