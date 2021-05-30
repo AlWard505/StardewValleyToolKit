@@ -37,9 +37,9 @@ def crop():
     seedamount = IntVar()
     
     calc = Button(cropwin, text= "Calculate", command =lambda: Calculate(sprinksmall.get(),sprinkmedium.get(),sprinklarge.get(),sprinkbiggest.get()))
-    calc.grid(row = 2, column = 4)
+    calc.grid(row = 3, column = 4)
     amountdisplay = Label(cropwin, textvariable = seedamount)
-    amountdisplay.grid(row = 3, column = 4)
+    amountdisplay.grid(row = 2, column = 4)
     frame = Frame(cropwin, width=15)
     frame.grid(row = 2, column=3)
 
@@ -84,10 +84,10 @@ def geode():
     currentgeodes.focus_set()
     currentgeodes.grid(row = 4, column = 1)
     calc = Button(geodewin, text= "Calculate", command =lambda: geodecalc(money.get(),currentgeodes.get()))
-    calc.grid(row = 2, column = 3)
+    calc.grid(row = 3, column = 3)
     totalgeode = IntVar()
     text = Label(geodewin, textvariable = totalgeode)
-    text.grid(row = 3, column=3)
+    text.grid(row = 2, column=3)
     frame = Frame(geodewin, width=15)
     frame.grid(row = 2, column=2)
 
