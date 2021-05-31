@@ -286,7 +286,7 @@ def vilinfo(vil,C1,C2):
     if C1.get() == True:
         birthdayframe = Frame(infoframe)
         birthdayframe.pack(side = LEFT)
-        Birthday = Label(birthdayframe,text="Birthday: "+vildict[selectedvillager]["Birthday"])
+        Birthday = Label(birthdayframe,text="Birthday: "+vildict[selectedvillager]["Birthday"],)
         Birthday.pack(side = LEFT)
 
     if C2.get() == True:
@@ -310,7 +310,7 @@ label = Label(main, text = "Stardew Valley Tools")
 label.pack(side = TOP)
 sprinkbutton = Button(main,text = "crop space calculator",width = 22, command = lambda:crop()) 
 sprinkbutton.pack(side = TOP)
-geodebutton = Button(main,text = "buying geodes from crobus",width = 22, command = lambda:geode()) 
+geodebutton = Button(main,text = "buying geodes from Krobus",width = 22, command = lambda:geode()) 
 geodebutton.pack(side = TOP)
 replacebutton = Button(main,text = "replacing grown crops",width = 22, command = lambda:replace()) 
 replacebutton.pack(side = TOP)
