@@ -284,16 +284,14 @@ def vilinfo(vil,C1,C2):
     entry = entry.translate({ord(")"): None})
     selectedvillager = vildict["allvil"][int(entry)]
     if C1.get() == True:
-        print("peepee")
         birthdayframe = Frame(infoframe)
-        birthdayframe.pack()
+        birthdayframe.pack(side = LEFT)
         Birthday = Label(birthdayframe,text="Birthday: "+vildict[selectedvillager]["Birthday"])
-        Birthday.pack(anchor=NW)
+        Birthday.pack(side = LEFT)
 
     if C2.get() == True:
-        print("poopoo")
         favoutiteframe = Frame(infoframe)
-        favoutiteframe.pack(anchor=NW)
+        favoutiteframe.pack(side = LEFT)
         favoutites = Text(favoutiteframe,height=10,width = 25)
         favoutites.insert(INSERT,"Favourite Gifts: ")
 
