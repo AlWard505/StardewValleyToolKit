@@ -243,6 +243,7 @@ def villagers():
 
     scrollboxframe2 = Frame(scrollboxframe)
     scrollboxframe2.pack()
+
     secondoption = Frame(vilwindow, bd = 5)
     secondoption.grid(row=1, column= 2)
 
@@ -261,12 +262,19 @@ def villagers():
     Villselect.config(yscrollcommand = scroll.set)
     scroll.config(command = Villselect.yview)
 
+    Birth = BooleanVar()
+    fav = BooleanVar()
 
+    birthcheck  = Checkbutton(secondoption,text="Birthday", variable=Birth, onvalue=True, offvalue=False)
+    birthcheck.pack(anchor=NW)
 
-    infobutt = Button(scrollboxframe,text ="get info",command=lambda:vilinfo(Villselect))
+    favcheck = Checkbutton(secondoption,text="Favourite", variable=fav, onvalue=True, offvalue=False)
+    favcheck.pack(anchor=NW)
+
+    infobutt = Button(scrollboxframe,text ="get info",command=lambda:vilinfo(Villselect,Birth,fav))
     infobutt.pack()
 
-def vilinfo(vil):
+def vilinfo(vil,C1,C2):
     for child in infoframe.winfo_children():
         child.destroy()
     entry = vil.curselection()
@@ -275,26 +283,29 @@ def vilinfo(vil):
     entry = entry.translate({ord("("): None})
     entry = entry.translate({ord(")"): None})
     selectedvillager = vildict["allvil"][int(entry)]
+    if C1.get() == True:
+        print("peepee")
+        birthdayframe = Frame(infoframe)
+        birthdayframe.pack()
+        Birthday = Label(birthdayframe,text="Birthday: "+vildict[selectedvillager]["Birthday"])
+        Birthday.pack(anchor=NW)
 
-    birthdayframe = Frame(infoframe)
-    birthdayframe.pack()
-    Birthday = Label(birthdayframe,text="Birthday: "+vildict[selectedvillager]["Birthday"])
-    Birthday.pack(anchor=NW)
+    if C2.get() == True:
+        print("poopoo")
+        favoutiteframe = Frame(infoframe)
+        favoutiteframe.pack(anchor=NW)
+        favoutites = Text(favoutiteframe,height=10,width = 25)
+        favoutites.insert(INSERT,"Favourite Gifts: ")
 
-    favoutiteframe = Frame(infoframe)
-    favoutiteframe.pack(anchor=NW)
-    favoutites = Text(favoutiteframe,height=10,width = 25)
-    favoutites.insert(INSERT,"Favourite Gifts: ")
+        favscroll = Scrollbar(favoutiteframe)
+        favscroll.pack(side=RIGHT,fill = BOTH)
 
-    favscroll = Scrollbar(favoutiteframe)
-    favscroll.pack(side=RIGHT,fill = BOTH)
+        for x in vildict[selectedvillager]["Favourite Gifts"]:
+            favoutites.insert(INSERT,"\n"+x)
+        favoutites.pack()
 
-    for x in vildict[selectedvillager]["Favourite Gifts"]:
-        favoutites.insert(INSERT,"\n"+x)
-    favoutites.pack()
-
-    favoutites.config(yscrollcommand = favscroll.set)
-    favscroll.config(command = favoutites.yview)
+        favoutites.config(yscrollcommand = favscroll.set)
+        favscroll.config(command = favoutites.yview)
     
 main = Tk()
 label = Label(main, text = "Stardew Valley Tools")
