@@ -184,62 +184,73 @@ def villagers():
         "allvil":[
             "alex","elliot","harvey","sam","sebastian","shane","abigail","emily","haley","leah","maru","penny"
         ],
+        "choices":[
+            "Birthday", "Favourite Gifts"
+        ],
         "alex":{
-            "birthday":"summer 13",
-            "favourites":["Complete Breakfast", "Salmon Dinner", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+            "Birthday":"summer 13",
+            "Favourite Gifts":["Complete Breakfast", "Salmon Dinner", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
         },
         "elliot":{
-            "birthday":"fall 5",
-            "favourites":["Crab Cakes", "Duck Feather", "Lobster", "Pomegranate", "Squid Ink", "Tom Kha Soup", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+            "Birthday":"fall 5",
+            "Favourite Gifts":["Crab Cakes", "Duck Feather", "Lobster", "Pomegranate", "Squid Ink", "Tom Kha Soup", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
         },
         "harvey":{
-            "birthday":"winter 14",
-            "favourites":["Coffee", "Pickles", "Super Meal", "Truffle Oil", "Wine", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+            "Birthday":"winter 14",
+            "Favourite Gifts":["Coffee", "Pickles", "Super Meal", "Truffle Oil", "Wine", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
         },
         "sam":{
-            "birthday":"summer 17",
-            "favourites":["actus Fruit", "Maple Bar", "Pizza", "Tigerseye", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+            "Birthday":"summer 17",
+            "Favourite Gifts":["actus Fruit", "Maple Bar", "Pizza", "Tigerseye", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
         },
         "sebastian":{
-            "birthday":"winter 10",
-            "favourites":["Frozen Tear", "Obsidian", "Pumpkin Soup", "Sashimi", "Void Egg", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+            "Birthday":"winter 10",
+            "Favourite Gifts":["Frozen Tear", "Obsidian", "Pumpkin Soup", "Sashimi", "Void Egg", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
         },
         "shane":{
-            "birthday":"spring 20",
-            "favourites":["Beer", "Hot Pepper", "Pepper Poppers", "Pizza", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+            "Birthday":"spring 20",
+            "Favourite Gifts":["Beer", "Hot Pepper", "Pepper Poppers", "Pizza", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
         },
         "abigail":{
-            "birthday":"fall 13",
-            "favourites":["Amethyst", "Banana Pudding", "Blackberry Cobbler", "Chocolate Cake", "Pufferfish", "Pumpkin", "Spicy Eel", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+            "Birthday":"fall 13",
+            "Favourite Gifts":["Amethyst", "Banana Pudding", "Blackberry Cobbler", "Chocolate Cake", "Pufferfish", "Pumpkin", "Spicy Eel", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
         },
         "emily":{
-            "birthday":"spring 27",
-            "favourites":["Amethyst", "Aquamarine", "Cloth", "Emerald", "Jade", "Ruby", "Survival Burger", "Topaz", "Wool", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+            "Birthday":"spring 27",
+            "Favourite Gifts":["Amethyst", "Aquamarine", "Cloth", "Emerald", "Jade", "Ruby", "Survival Burger", "Topaz", "Wool", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
         },
         "haley":{
-            "birthday":"spring 14",
-            "favourites":["Coconut", "Fruit Salad", "Pink Cake", "Sunflower", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Rabbit's Foot"]
+            "Birthday":"spring 14",
+            "Favourite Gifts":["Coconut", "Fruit Salad", "Pink Cake", "Sunflower", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Rabbit's Foot"]
         },
         "leah":{
-            "birthday":"winter 23",
-            "favourites":["Goat Cheese", "Poppyseed Muffin", "Salad", "Stir Fry", "Truffle", "Vegetable Medley", "Wine", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+            "Birthday":"winter 23",
+            "Favourite Gifts":["Goat Cheese", "Poppyseed Muffin", "Salad", "Stir Fry", "Truffle", "Vegetable Medley", "Wine", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
         },
         "maru":{
-            "birthday":"summer 10",
-            "favourites":["Battery Pack", "Cauliflower", "Cheese Cauliflower", "Diamond", "Gold Bar", "Iridium Bar", "Miner's Treat", "Pepper Poppers", "Radioactive Bar", "Rhubarb Pie", "Strawberry", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+            "Birthday":"summer 10",
+            "Favourite Gifts":["Battery Pack", "Cauliflower", "Cheese Cauliflower", "Diamond", "Gold Bar", "Iridium Bar", "Miner's Treat", "Pepper Poppers", "Radioactive Bar", "Rhubarb Pie", "Strawberry", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
         },
         "penny":{
-            "birthday":"fall 2",
-            "favourites":["Diamond", "Emerald", "Melon", "Poppy", "Poppyseed Muffin", "Red Plate", "Roots Platter", "Sandfish", "Tom Kha Soup", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard"]
+            "Birthday":"fall 2",
+            "Favourite Gifts":["Diamond", "Emerald", "Melon", "Poppy", "Poppyseed Muffin", "Red Plate", "Roots Platter", "Sandfish", "Tom Kha Soup", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard"]
         },
     }
     vilwindow = Toplevel(main)
-    scrollboxframe = Frame(vilwindow)
-    scrollboxframe.grid(row=1,column=1)
+    
+    scrollboxframe = Frame(vilwindow,bd = 5)
+    scrollboxframe.grid(row=1,column=1,sticky=N+S)
+
+    scrollboxframe2 = Frame(scrollboxframe)
+    scrollboxframe2.pack()
+    secondoption = Frame(vilwindow, bd = 5)
+    secondoption.grid(row=1, column= 2)
+
     infoframe = Frame(vilwindow,width = 200,bd=5)
-    infoframe.grid(row=1,column=2)
-    Villselect = Listbox(scrollboxframe,selectmode = SINGLE,height=10)
-    scroll = Scrollbar(scrollboxframe)
+    infoframe.grid(row=1,column=3,sticky=N+S)
+
+    Villselect = Listbox(scrollboxframe2,height=10,selectmode = SINGLE)
+    scroll = Scrollbar(scrollboxframe2)
     scroll.pack(side=RIGHT,fill = BOTH)
 
     x=0
@@ -250,8 +261,10 @@ def villagers():
     Villselect.config(yscrollcommand = scroll.set)
     scroll.config(command = Villselect.yview)
 
-    infobutt = Button(vilwindow,text ="get info",command=lambda:vilinfo(Villselect))
-    infobutt.grid(row=2,column=1)
+
+
+    infobutt = Button(scrollboxframe,text ="get info",command=lambda:vilinfo(Villselect))
+    infobutt.pack()
 
 def vilinfo(vil):
     for child in infoframe.winfo_children():
@@ -262,14 +275,26 @@ def vilinfo(vil):
     entry = entry.translate({ord("("): None})
     entry = entry.translate({ord(")"): None})
     selectedvillager = vildict["allvil"][int(entry)]
-    birthday = Label(infoframe,text="birthday: "+vildict[selectedvillager]["birthday"])
-    birthday.pack(anchor=NW)
-    favoutites = Label(infoframe, text = "favourites: ")
-    favoutites.pack(anchor=NW)
-    for x in vildict[selectedvillager]["favourites"]:
-        favoutites = Label(infoframe, text =x)
-        favoutites.pack(anchor=NW)
 
+    birthdayframe = Frame(infoframe)
+    birthdayframe.pack()
+    Birthday = Label(birthdayframe,text="Birthday: "+vildict[selectedvillager]["Birthday"])
+    Birthday.pack(anchor=NW)
+
+    favoutiteframe = Frame(infoframe)
+    favoutiteframe.pack(anchor=NW)
+    favoutites = Text(favoutiteframe,height=10,width = 25)
+    favoutites.insert(INSERT,"Favourite Gifts: ")
+
+    favscroll = Scrollbar(favoutiteframe)
+    favscroll.pack(side=RIGHT,fill = BOTH)
+
+    for x in vildict[selectedvillager]["Favourite Gifts"]:
+        favoutites.insert(INSERT,"\n"+x)
+    favoutites.pack()
+
+    favoutites.config(yscrollcommand = favscroll.set)
+    favscroll.config(command = favoutites.yview)
     
 main = Tk()
 label = Label(main, text = "Stardew Valley Tools")
