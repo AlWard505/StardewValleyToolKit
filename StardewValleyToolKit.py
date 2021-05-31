@@ -178,7 +178,99 @@ def repcalc(x,y,z,c):
     totalrep.set(total)
     print(totalrep)
 
+def villagers():
+    global vildict,infoframe
+    vildict = {
+        "allvil":[
+            "alex","elliot","harvey","sam","sebastian","shane","abigail","emily","haley","leah","maru","penny"
+        ],
+        "alex":{
+            "birthday":"summer 13",
+            "favourites":["Complete Breakfast", "Salmon Dinner", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+        },
+        "elliot":{
+            "birthday":"fall 5",
+            "favourites":["Crab Cakes", "Duck Feather", "Lobster", "Pomegranate", "Squid Ink", "Tom Kha Soup", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+        },
+        "harvey":{
+            "birthday":"winter 14",
+            "favourites":["Coffee", "Pickles", "Super Meal", "Truffle Oil", "Wine", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+        },
+        "sam":{
+            "birthday":"summer 17",
+            "favourites":["actus Fruit", "Maple Bar", "Pizza", "Tigerseye", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+        },
+        "sebastian":{
+            "birthday":"winter 10",
+            "favourites":["Frozen Tear", "Obsidian", "Pumpkin Soup", "Sashimi", "Void Egg", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+        },
+        "shane":{
+            "birthday":"spring 20",
+            "favourites":["Beer", "Hot Pepper", "Pepper Poppers", "Pizza", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+        },
+        "abigail":{
+            "birthday":"fall 13",
+            "favourites":["Amethyst", "Banana Pudding", "Blackberry Cobbler", "Chocolate Cake", "Pufferfish", "Pumpkin", "Spicy Eel", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+        },
+        "emily":{
+            "birthday":"spring 27",
+            "favourites":["Amethyst", "Aquamarine", "Cloth", "Emerald", "Jade", "Ruby", "Survival Burger", "Topaz", "Wool", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+        },
+        "haley":{
+            "birthday":"spring 14",
+            "favourites":["Coconut", "Fruit Salad", "Pink Cake", "Sunflower", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Rabbit's Foot"]
+        },
+        "leah":{
+            "birthday":"winter 23",
+            "favourites":["Goat Cheese", "Poppyseed Muffin", "Salad", "Stir Fry", "Truffle", "Vegetable Medley", "Wine", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+        },
+        "maru":{
+            "birthday":"summer 10",
+            "favourites":["Battery Pack", "Cauliflower", "Cheese Cauliflower", "Diamond", "Gold Bar", "Iridium Bar", "Miner's Treat", "Pepper Poppers", "Radioactive Bar", "Rhubarb Pie", "Strawberry", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard", "Rabbit's Foot"]
+        },
+        "penny":{
+            "birthday":"fall 2",
+            "favourites":["Diamond", "Emerald", "Melon", "Poppy", "Poppyseed Muffin", "Red Plate", "Roots Platter", "Sandfish", "Tom Kha Soup", "Golden Pumpkin", "Magic Rock Candy", "Pearl", "Prismatic Shard"]
+        },
+    }
+    vilwindow = Toplevel(main)
+    scrollboxframe = Frame(vilwindow)
+    scrollboxframe.grid(row=1,column=1)
+    infoframe = Frame(vilwindow,width = 200,bd=5)
+    infoframe.grid(row=1,column=2)
+    Villselect = Listbox(scrollboxframe,selectmode = SINGLE,height=10)
+    scroll = Scrollbar(scrollboxframe)
+    scroll.pack(side=RIGHT,fill = BOTH)
 
+    x=0
+    while x != len(vildict["allvil"]):
+        Villselect.insert(x,vildict["allvil"][x])
+        Villselect.pack()
+        x+=1
+    Villselect.config(yscrollcommand = scroll.set)
+    scroll.config(command = Villselect.yview)
+
+    infobutt = Button(vilwindow,text ="get info",command=lambda:vilinfo(Villselect))
+    infobutt.grid(row=2,column=1)
+
+def vilinfo(vil):
+    for child in infoframe.winfo_children():
+        child.destroy()
+    entry = vil.curselection()
+    entry = str(entry)
+    entry = entry.translate({ord(","): None})
+    entry = entry.translate({ord("("): None})
+    entry = entry.translate({ord(")"): None})
+    selectedvillager = vildict["allvil"][int(entry)]
+    birthday = Label(infoframe,text="birthday: "+vildict[selectedvillager]["birthday"])
+    birthday.pack(anchor=NW)
+    favoutites = Label(infoframe, text = "favourites: ")
+    favoutites.pack(anchor=NW)
+    for x in vildict[selectedvillager]["favourites"]:
+        favoutites = Label(infoframe, text =x)
+        favoutites.pack(anchor=NW)
+
+    
 main = Tk()
 label = Label(main, text = "Stardew Valley Tools")
 label.pack(side = TOP)
@@ -188,5 +280,7 @@ geodebutton = Button(main,text = "buying geodes from crobus",width = 22, command
 geodebutton.pack(side = TOP)
 replacebutton = Button(main,text = "replacing grown crops",width = 22, command = lambda:replace()) 
 replacebutton.pack(side = TOP)
+vilagerbutton = Button(main,text = "villagers",width = 22, command = lambda:villagers()) 
+vilagerbutton.pack(side = TOP)
 
 main.mainloop()
