@@ -178,6 +178,8 @@ def repcalc(x,y,z,c):
     totalrep.set(total)
     print(totalrep)
 
+
+# for easy access to villager information
 def villagers():
     global vildict,infoframe
     vildict = {
